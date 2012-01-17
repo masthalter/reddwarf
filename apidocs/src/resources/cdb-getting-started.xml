@@ -39,8 +39,19 @@
             <holder>Rackspace US, Inc.</holder>
         </copyright>
         <releaseinfo>API v1.0 BETA</releaseinfo>
-        <pubdate>2012-01-11</pubdate>
+        <pubdate>2012-01-16</pubdate>
         <revhistory>
+            <revision>
+                <date>2012-01-16</date>
+                <revdescription>
+                    <itemizedlist spacing="compact">
+                        <listitem>
+                            <para>Updated xml examples to remove extra
+                                white space.</para>
+                        </listitem>
+                    </itemizedlist>
+                </revdescription>
+            </revision>
             <revision>
                 <date>2012-01-11</date>
                 <revdescription>
@@ -833,7 +844,7 @@
                 </note>
             </step>
             <step>
-                <para> Reboot your database instance. </para>
+                <para> Reboot your Cloud Server instance. </para>
             </step>
         </procedure>
         <procedure>
@@ -854,7 +865,7 @@
                 </note>
             </step>
             <step>
-                <para> Reboot your database instance. </para>
+                <para> Reboot your Cloud Server instance. </para>
             </step>
         </procedure>
     </section>

@@ -56,7 +56,7 @@
         </copyright>
         <releaseinfo>API v1.0 BETA</releaseinfo>
         <productname>Rackspace Cloud Database BETA</productname>
-        <pubdate>2012-01-11</pubdate>
+        <pubdate>2012-01-16</pubdate>
         <legalnotice role="rs-api">
             <annotation>
                 <remark>Copyright details are filled in by the template.</remark>
@@ -72,11 +72,26 @@
         
         <revhistory>
             <revision>
-                <date>2011-01-xx</date>
+                <date>2011-01-16</date>
                 <revdescription>
-                    <itemizedlist>
+                    <itemizedlist spacing="compact">
                         <listitem>
-                            <para>Initial Beta release.</para>
+                            <para>Updated xml examples to remove extra
+                                white space.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Added <xref
+                                   linkend="Root_Flag"/>.</para>
+                        </listitem>
+                    </itemizedlist>
+                </revdescription>
+            </revision>
+            <revision>
+                <date>2011-01-11</date>
+                <revdescription>
+                    <itemizedlist spacing="compact">
+                        <listitem>
+                            <para>Initial draft.</para>
                         </listitem>
                     </itemizedlist>
                 </revdescription>
@@ -142,8 +157,11 @@
             <itemizedlist spacing="compact">
                 <listitem>
                     <para>The <emphasis>management</emphasis> API,
-                        available only to developers within Rackspace,
-                        is the subject of this document.</para>
+                        available only to developers, Support
+                        personnel, and Operations administrators
+                        within Rackspace, depending on the granted
+                        LDAP roles/permissions, is the subject of this
+                        document.</para>
                 </listitem>
                 <listitem>
                     <para>The <emphasis>public</emphasis> API,
@@ -291,15 +309,13 @@
             <title>Authentication</title>
             <para>Every ReST request against the Cloud Database
                 Management API requires that the caller be
-                authenticated with HTTP Basic Auth using a valid
-                Rackspace SSO username and password. </para>
+                authenticated with HTTP Basic Auth using LDAP. </para>
             <note>
-                <para>Not all Rackspace employees with valid SSO
-                    credentials will have access to the Cloud Database
-                    Management API. If you cannot access the service
-                    and feel that this is in error, please contact
-                    your supervisor and have the appropriate roles
-                    added to your account. </para>
+                <para>Not all Rackspace employees will have access to
+                    the Cloud Database Management API. If you cannot
+                    access the service and feel that this is in error,
+                    please contact your supervisor and have the
+                    appropriate LDAP roles/permissions added. </para>
             </note>
         </section>
         <section xml:id="Request_Response_Types-d1e503">
@@ -1085,6 +1101,9 @@
                             <para>If MySQL has crashed (causing the
                                 SHUTDOWN status), please call support
                                 for assistance.</para>
+                            <remark>Writer: Nicole will provide a
+                                "proper escalanation note" to replace
+                                the note above. 1-19-12</remark>
                         </note>
                     </para>
                 </listitem>
@@ -1158,6 +1177,17 @@
                 </wadl:resource>
             </wadl:resources>
         </section>
+        
+        <section xml:id="Root_Flag">
+            <title>Root Flag</title>
+            <para>This section describes the operations that are supported for getting information about the root flag.</para>
+            <wadl:resources 
+                xmlns:wadl="http://wadl.dev.java.net/2009/02">
+                <wadl:resource href="management.wadl#rootdetails">
+                    <wadl:method href="getrootdetails"/>                
+                </wadl:resource>
+            </wadl:resources>               
+        </section>  
            
     </chapter>
 </book>

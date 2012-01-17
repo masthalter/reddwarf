@@ -108,7 +108,24 @@
       </para>
       <remark>Reviewer: in the DNS project, we have been requested by the customer to provide a table of parameters (should be pulled automatically if parms defined in wadl) and a table of attributes (for calls that allow detailed info about the object created to be specified. No doubt our DB customers will want this too.</remark>
       <remark>Reviewer: These tables probably need 4 columns: name; parameter type: e.g. template, query, etc.; data type: string, etc.; required?; description.</remark>
-      <para>This operation returns the host name, percent of used RAM, total RAM on host, used RAM on host, and a list of the compute instances running on the given host.</para>
+      <para>This operation returns the following information:</para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>host name</para>
+        </listitem>
+        <listitem>
+          <para>percent of RAM used</para>
+        </listitem>
+        <listitem>
+          <para>total RAM on host</para>
+        </listitem>
+        <listitem>
+          <para>used RAM on host</para>
+        </listitem>
+        <listitem>
+          <para>a list of the compute instances running on the given host</para>
+        </listitem>
+      </itemizedlist>
       <para>If the host name does not exist, a 404 not found error is returned.</para>
     </wadl:doc>
     <request>
@@ -147,7 +164,7 @@
       </para>
       <remark>Reviewer: in the DNS project, we have been requested by the customer to provide a table of parameters (should be pulled automatically if parms defined in wadl) and a table of attributes (for calls that allow detailed info about the object created to be specified. No doubt our DB customers will want this too.</remark>
       <remark>Reviewer: These tables probably need 4 columns: name; parameter type: e.g. template, query, etc.; data type: string, etc.; required?; description.</remark>
-      <para>This operation returns detailed information about the status and details for the specified Database Instance.</para>
+      <para>This operation returns detailed information about the status and details for the specified database instance.</para>
     </wadl:doc>
     <request>
       <representation mediaType="application/xml">
@@ -224,7 +241,24 @@
         Returns detailed information for the specified account.
       </para>
       <remark>Reviewer: This section needs examples.</remark>
-      <para>This operation returns the account name, id, a list of hosts that have the id, name, and status of each instance on the hosts.</para>
+      <para>This operation returns: </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>account name</para>
+        </listitem>
+        <listitem>
+          <para>id</para>
+        </listitem>
+        <listitem>
+          <para>list of hosts that have the id</para>
+        </listitem>
+        <listitem>
+          <para>instance name</para>
+        </listitem>
+        <listitem>
+          <para>status of each instance on the hosts</para>
+        </listitem>
+      </itemizedlist>
     </wadl:doc>
     <request>
       <representation mediaType="application/xml">
@@ -445,10 +479,40 @@
     &commonFaults;
     &getFaults;
   </method>
+  
   <method name="GET" id="getrootdetails">
+    <wadl:doc xml:lang="EN" title="Get Root Details" xmlns="http://docbook.org/ns/docbook">
+      <para role="shortdesc">
+        Gets the root flag details for the specified instance.
+      </para>
+      <remark>Reviewer: Need the description for the summary table above and the detailed description for the next paragraph.</remark>
+      <para>This operation shows the root flag details for the specified instance.</para>
+    </wadl:doc>
+    <request>
+      <representation mediaType="application/xml">
+        <doc>
+          <para xmlns="http://docbook.org/ns/docbook">The following examples show the Get Root Details requests:</para>
+          <xsdxt:code href="../apidocs/src/resources/samples/db-mgmt-get-root-details-request.xml"/>
+        </doc>
+      </representation>
+      <representation mediaType="application/json">
+        <doc>
+          <xsdxt:code href="../apidocs/src/resources/samples/db-mgmt-get-root-details-request.json"/>
+        </doc>
+      </representation>
+    </request>
       <response status="200">
-          <representation mediaType="application/xml" element="dbaas:RootDetails"/>
-          <representation mediaType="application/json" element="dbaas:RootDetails"/>
+          <representation mediaType="application/xml" element="dbaas:RootDetails">
+            <doc>
+              <para xmlns="http://docbook.org/ns/docbook">The following examples show the Get Root Details responses:</para>
+              <xsdxt:code href="../apidocs/src/resources/samples/db-mgmt-get-root-details-response.xml"/>
+            </doc>
+          </representation>
+          <representation mediaType="application/json" element="dbaas:RootDetails">
+            <doc>
+              <xsdxt:code href="../apidocs/src/resources/samples/db-mgmt-get-root-details-response.json"/>
+            </doc>
+          </representation>
       </response>
       &commonFaults;
       &getFaults;
