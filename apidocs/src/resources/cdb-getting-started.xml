@@ -39,8 +39,19 @@
             <holder>Rackspace US, Inc.</holder>
         </copyright>
         <releaseinfo>API v1.0 BETA</releaseinfo>
-        <pubdate>2012-01-16</pubdate>
+        <pubdate>2012-01-26</pubdate>
         <revhistory>
+            <revision>
+                <date>2012-01-26</date>
+                <revdescription>
+                    <itemizedlist spacing="compact">
+                        <listitem>
+                            <para>Updated doc for bug fixes in
+                                code.</para>
+                        </listitem>
+                    </itemizedlist>
+                </revdescription>
+            </revision>
             <revision>
                 <date>2012-01-16</date>
                 <revdescription>
@@ -844,7 +855,8 @@
                 </note>
             </step>
             <step>
-                <para> Reboot your Cloud Server instance. </para>
+                <para> Reboot your Cloud Server so that the updated
+                    routing information takes effect. </para>
             </step>
         </procedure>
         <procedure>
@@ -865,7 +877,8 @@
                 </note>
             </step>
             <step>
-                <para> Reboot your Cloud Server instance. </para>
+                <para> Reboot your Cloud Server so that the updated
+                    routing information takes effect. </para>
             </step>
         </procedure>
     </section>
