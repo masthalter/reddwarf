@@ -49,6 +49,11 @@
                             <para>Updated doc for bug fixes in
                                 code.</para>
                         </listitem>
+                        <listitem>
+                            <para>Added DFW service endpoint in <xref
+                                   linkend="Service_Access_Endpoints-d1e753"
+                                /></para>
+                        </listitem>
                     </itemizedlist>
                 </revdescription>
             </revision>
@@ -458,7 +463,7 @@
                                 ><code>https://ord.databases.api.rackspacecloud.com/v1.0/</code><parameter>1234</parameter>/
                         </td>
                     </tr>
-                    <tr align="left" security="writeronly">
+                    <tr align="left">
                         <td colspan="2">Dallas/Ft. Worth (DFW)</td>
                         <td colspan="5"
                                 ><code>https://dfw.databases.api.rackspacecloud.com/v1.0/</code><parameter>1234</parameter>/
@@ -495,7 +500,7 @@
             number returned as part of the authentication response.
             Refer to <xref linkend="Generating_Auth_Token"/>.</para>
         <para>When making a Cloud Database API call, place the
-            endpoint at the beginning of the request URL
+            endpoint at the beginning of the request URL, for example:
                 (<code>https://ord.databases.api.rackspacecloud.com/v1.0/your_acct_id/</code>),
             as you can see in the cURL List Flavors Details Request
             examples in <xref linkend="List_Flavors"/>.</para>
